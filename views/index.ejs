@@ -1,0 +1,23 @@
+<h1>Daftar mahasiswa</h1>
+
+<% if (mahasiswa.length < 1) { %>
+    <p>Daftar mahasiswa masih kosong.</p>
+<% } else {%> 
+    <ul>
+    <% mahasiswa.forEach(mhs => { %>
+        <li>
+            Nama : <%= mhs.nama %> 
+        </li>
+        <li>
+            Program Studi : <%= mhs.prodi %> 
+        </li>
+        <li>
+            Angkatan : <%= mhs.angkatan %> 
+        </li>
+        <li>
+            Email : <%= mhs.email %> 
+        </li>
+        <br>
+    <% }) %>
+    </ul>
+<% } %> 
